@@ -36,4 +36,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+}
+    $user = App\User::find(1);
+
+    foreach ($user->tasks as $task) {
+    echo $task->name;
 }
