@@ -21,3 +21,9 @@ class Task extends Model
         return $this->belongsTo(User::class);
     }
 }
+
+$user = App\User::find(1);
+
+foreach ($user->tasks as $task) {
+    echo $task->name;
+}
