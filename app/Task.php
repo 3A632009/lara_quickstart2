@@ -22,8 +22,3 @@ class Task extends Model
     }
 }
 
-$user = App\User::find(1);
-
-foreach ($user->tasks as $task) {
-    echo $task->name;
-}
