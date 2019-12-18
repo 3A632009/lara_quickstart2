@@ -57,8 +57,15 @@
                                 <div>{{ $task->name }}</div>
                             </td>
 
+                            <!-- 刪除按鈕 -->
                             <td>
-                                <!-- 代辦：刪除按鈕 -->
+                                <form action="/task/{{ $task->id }}" method="POST">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+                                    {{--方法欺騙的註記--}}
+                                    {{--<input type="hidden" name="_method" value="DELETE">--}}
+                                    <button>刪除任務</button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
